@@ -8,7 +8,10 @@ router.get('/user', (req, res) => {
 });
 
 router.post('/user', (req, res) => {
-    res.send('user');
+    const body = req.body;
+    const user = new User(body);
+    user.save();
+    res.send(user);
 });
 
 module.exports = router;
