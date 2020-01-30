@@ -14,4 +14,8 @@ router.post('/user', (req, res) => {
     res.send(user);
 });
 
+router.delete('/user/:id', (req, res) => {
+    res.send('user deleted..!');
+});
+
 module.exports = router;
